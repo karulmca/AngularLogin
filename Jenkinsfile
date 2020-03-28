@@ -6,6 +6,9 @@ pipeline{
         checkout scm
       }
     }
+    stage('Checkout SCM'){
+        git branch: 'master' url: 'git@github.com:karulmca/AngularLogin.git'
+    }
     stage ('install modules'){
       steps{
         sh '''
