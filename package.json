@@ -7,7 +7,7 @@
     },
     "scripts": {
         "deploy": "npm run build&&gh-pages -d build",
-        "build": "whatever-command-you-want-npm-to-run",
+        "build": "webpack --mode production",
         "start": "webpack-dev-server --mode development --open"
     },
     "license": "MIT",
