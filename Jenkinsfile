@@ -7,14 +7,12 @@ pipeline{
         git branch: 'master', url: 'https://github.com/karulmca/AngularLogin.git'
       }
     }
-    stage ('install modules'){
-      steps{
-        sh '''
-          npm install --verbose -d 
-          npm install --save classlist.js
-        '''
+    stage('Build') {
+      steps {
+        sh 'npm install'
+         sh '<<Build Command>>'
       }
-    }
+    }  
    }
    
     
