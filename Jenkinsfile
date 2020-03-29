@@ -32,7 +32,7 @@ pipeline{
         }
         stage('Deploy'){
           steps{
-                sh "pm2 startOrGracefulReload current/ecosystem.config.js --update-env"
+                //sh "pm2 startOrGracefulReload current/ecosystem.config.js --update-env"
                 sh "pm2 restart all"
           }
         }
