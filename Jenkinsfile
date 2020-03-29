@@ -22,7 +22,7 @@ pipeline{
     stage('Install node modules'){
       steps{
                 sh "npm install"
-                sh "npm install pm2 -g"
+                //sh "npm install pm2 -g"
         }
     }
         stage('Build'){
