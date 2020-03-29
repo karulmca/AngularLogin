@@ -26,7 +26,7 @@ pipeline{
     }
         stage('Build'){
           steps{
-                sh "npm run build:ssr"
+                sh "npm run build"
         }
         }
         stage('Deploy'){
