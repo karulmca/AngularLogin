@@ -21,7 +21,7 @@ pipeline{
     
     stage('Install node modules'){
       steps{
-                sh "pm2 start --no-daemon app.js"
+                sh "pm2 start app.js"
                 sh "npm install"
                 //sh "npm install pm2 -g"
         }
