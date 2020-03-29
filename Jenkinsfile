@@ -20,13 +20,19 @@ pipeline{
    // } 
     
     stage('Install node modules'){
+      steps{
                 sh "npm install"
         }
+    }
         stage('Build'){
+          steps{
                 sh "npm run build:ssr"
         }
+        }
         stage('Deploy'){
+          steps{
                 sh "pm2 restart all"
+          }
         }
    }
    
